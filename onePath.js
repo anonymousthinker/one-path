@@ -1,3 +1,4 @@
+const BORDER_LENGTH = 30;
 const ROW_LENGTH = 10;
 const rowOne = makeRow('┃');
 const rowTwo = makeRow('┃');
@@ -22,7 +23,10 @@ function makePlayer() {
 
 function makeBorderTopAndBelow() {
   let border = '🔳';
-  border += '━━━━━━━━━━━━━━━━━━━━━━━━━━━━━';
+
+  for (let index = 1; index < BORDER_LENGTH; index++) {
+    border += '━'
+  }
 
   return border + ' 🔳';
 }
